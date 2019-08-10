@@ -1,0 +1,354 @@
+    body {
+        margin: 0;
+        margin-top: 54px;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: black;
+        padding: 4px;
+        height: 46px;
+        text-align: center;
+        z-index: 10;
+    }
+
+    header img {
+        height: 46px;
+        text-align: center;
+        transform: scale(1.2);
+    }
+    section.background {
+    position: absolute;
+    z-index: 1;
+    max-height: 60vh;
+    height: 100vw;
+    background-image: url(img/room.jpg);
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+section.background::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #000000a6;
+}
+section.background .text {
+    z-index: 1;
+    vertical-align: middle;
+    padding: 0 15px 15px 20px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-shadow: 0 0 4px black;
+}
+
+section.background .text h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+section.background .text h2 {
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+section.background .text h3 {
+    margin: 0;
+    margin-top: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.blindarea {
+    max-height: calc(60vh - 10px);
+    height: calc(100vw - 10px);
+}
+
+section.maincontent {
+    position: absolute;
+    top: 54px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    overflow: auto;
+}
+
+.scroll {
+    background-color: white;
+    display: block;
+    padding: 0px 15px;
+    position: relative;
+    box-shadow: 0 0 5px #00000080;
+    min-height: 800px;
+}
+.scrollcont {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.scroll h1 {
+    margin: 0;
+    padding: 15px 0 10px 0;
+    font-size: 32px;
+}
+
+.event {
+    min-height: 120px;
+    box-shadow: 0 0 4px #00000070;
+    background-image: url(img/kids_entertain.jpg);
+    background-position: center;
+    background-size: cover;
+    display: table;
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+}
+.event * {
+    z-index: 1;
+    position: relative;
+}
+.event::after {
+
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #0000007d;
+}
+a.button {
+    padding: 12px 24px;
+    margin: 0 auto;
+    background-color: white;
+    display: table;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: black;
+    font-weight: bold;
+}
+a.button.inv {
+    background-color: black;
+    color: white;
+}
+h2 {
+    margin: 0;
+}
+
+.eventtext {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px 20px;
+    color: white;
+}
+
+.eventtext span {
+    display: block;
+    text-transform: uppercase;
+    text-shadow: 0 0 4px black;
+}
+
+.eventtext span.overtitle {
+    margin-left: 3px;
+    font-size: 16px;
+}
+
+.eventtext span.title {
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 0.9;
+}
+header a {
+    position: absolute;
+    color: white;
+    left: 10px;
+    top: 10px;
+    padding: 5px;
+}
+nav {
+    position: fixed;
+    z-index: 20;
+    background-color: black;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    padding: 20px;
+    transition: 0.3s;
+}
+nav.hidden {
+    pointer-events: none;
+    opacity: 0;
+    right: 50px;
+}
+nav div {
+  transition: 0.3s;
+}
+nav.hidden div {
+    transform: scale(0.95);
+}
+
+nav img {
+    width: 200px;
+    display: block;
+}
+
+
+nav div a {
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    margin: 0 auto;
+    padding: 20px 10px;
+    border-bottom: 1px solid #171717;
+    color: white;
+    transition: 0.3s;
+}
+nav div a:hover {
+    padding: 20px 12px;
+}
+.interact span {
+    display: block;
+    padding: 5px 10px;
+    color: white;
+    background-color: #0000004d;
+}
+.article {
+    display: inline-block;
+    width: 180px;
+    height: 180px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+span.amount {
+    display: none;
+}
+
+.article.ordered .amount {
+    display: block;
+}
+.article .articletext {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #0000008f;
+    text-transform: uppercase;
+    color: white;
+    padding: 10px 15px;
+}
+.setting a {
+    padding: 8px;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    min-width: 24px;
+    text-align: center;
+}
+
+.article .articletext span.price {
+    font-size: 20px;
+    float: right;
+    font-weight: 300;
+}
+
+.interact span.title {
+    font-weight: bold;
+}
+a.book {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 1px solid green;
+    background-color: #dcedc8;
+}
+.scrollcont h4 {
+    padding: 10px 0 0 0;
+    margin: 0;
+}
+a.button.inv.mrg {
+    margin: 10px auto;
+}
+.scrollcont span.thin {
+    font-weight: 300;
+    font-size: 50px;
+}
+
+a {
+    color: initial;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav div {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+table.staymembers {
+    width: 100%;
+}
+
+table.staymembers tr {
+    padding: 10px;
+    border: 0;
+}
+
+table.staymembers td {
+    border: 0;
+    padding: 10px;
+    box-shadow: 0 0 3px 0px #00000061;
+}
+
+table.staymembers th {
+    border: 0;
+    padding: 10px;
+    box-shadow: 0 0 3px 0px #00000061;
+    background-color: #f1f1f1;
+}
+span.price {
+    margin: 2px 0;
+    display: block;
+    font-size: 19px;
+    text-transform: uppercase;
+}
+table.staymembers tr.selected {
+    background-color: #dcedc8;
+}
+.interact {
+    display: table-footer-group;
+    background-color: #0000004d;
+}
+
+.interact a {
+    padding: 10px 20px;
+    display: inline-block;
+    color: white;
+    background-color: #0000003d;
+}
+a[onclick="closeSidebar()"] {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    color: white;
+}
+
+a[onclick="closeSidebar()"] i {
+    font-size: 28px;
+}
